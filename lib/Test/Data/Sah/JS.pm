@@ -287,3 +287,7 @@ _
 
 1;
 # ABSTRACT: Routines for testing Data::Sah (js compiler)
+
+=head1 FUNCTIONS
+
+=head2 run_spectest_for_js()
