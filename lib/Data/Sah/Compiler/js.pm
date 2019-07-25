@@ -25,8 +25,10 @@ sub BUILD {
 sub name { "js" }
 
 sub expr {
-    my ($self, $expr) = @_;
-    $self->expr_compiler->js($expr);
+    require Language::Expr;
+
+    my ($self, $cd, $expr) = @_;
+    "(" . Language::Expr->new->get_compiler('js')->compile($expr) . ")";
 }
 
 sub literal {
