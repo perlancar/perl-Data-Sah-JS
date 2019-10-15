@@ -22,8 +22,8 @@ sub gen_each {
 
     my %iargs = %{$cd->{args}};
     $iargs{outer_cd}             = $cd;
-    $iargs{data_name}            = $data_name,
-    $iargs{data_term}            = $data_term,
+    $iargs{data_name}            = $data_name;
+    $iargs{data_term}            = $data_term;
     $iargs{schema}               = $cv;
     $iargs{schema_is_normalized} = 0;
     $iargs{indent_level}++;

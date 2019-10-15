@@ -31,6 +31,14 @@ sub expr {
     "(" . Language::Expr->new->get_compiler('js')->compile($expr) . ")";
 }
 
+# evaluate all terms, then return the last term. user has to make sure all the
+# terms are properly parenthesized if it contains operator with precedence less
+# than the list operator.
+sub expr_list {
+    my ($self, @t) = @_;
+    "(".join(", ", @t).")";
+}
+
 sub literal {
     my ($self, $val) = @_;
 
